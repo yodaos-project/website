@@ -1,0 +1,30 @@
+{
+  "name": "@yoda/website",
+  "version": "1.0.0",
+  "description": "The website for YodaOS",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve dist -l 8080",
+    "build": "make dist",
+    "preview": "open ./dist/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yodaos-project/website.git"
+  },
+  "keywords": [
+    "yodaos",
+    "website"
+  ],
+  "author": "Yazhong Liu <yorkiefixer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yodaos-project/website/issues"
+  },
+  "homepage": "https://github.com/yodaos-project/website#readme",
+  "devDependencies": {
+    "ejs": "^2.6.1",
+    "jsdoc": "^3.5.5",
+    "serve": "^10.1.1"
+  }
+}
