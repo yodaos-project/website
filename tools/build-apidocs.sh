@@ -7,7 +7,7 @@ JSDOC=./node_modules/.bin/jsdoc
 init_source() {
   rm -rf $ROOT_DIR
   mkdir -p $ROOT_DIR
-  git clone git@github.com:yodaos-project/yodart.git $ROOT_DIR/yodart
+  git clone https://github.com/yodaos-project/yodart.git $ROOT_DIR/yodart
 }
 
 init_target() {
