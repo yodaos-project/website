@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+HOME_DIR=`pwd`
 ROOT_DIR=.tmp
 DEST_DIR=dist/docs
 JSDOC=./node_modules/.bin/jsdoc
@@ -16,13 +17,13 @@ init_target() {
 }
 
 git_checkout() {
-  cd $ROOT_DIR/yodart
+  cd $HOME_DIR/$ROOT_DIR/yodart
   git checkout $1
-  cd ../../
+  cd $HOME_DIR
 }
 
 build_apidoc() {
-  echo "\nbuilding apidoc for $1 on $2"
+  echo "building apidoc for $1 on $2"
   git_checkout $1
   $JSDOC -c jsdoc.config \
     -R $ROOT_DIR/yodart/README.md \
