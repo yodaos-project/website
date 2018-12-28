@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
-  <a class="navbar-brand" href="#">YODAOS</a>
+  <a class="navbar-brand" href="/">YODAOS</a>
   <!-- <button>Powered by ShadowNode</button> -->
   <button class="navbar-toggler" 
     type="button" 
@@ -22,9 +22,9 @@
           aria-haspopup="true" 
           aria-expanded="false">API Reference</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="docs/latest/">latest</a>
+          <a class="dropdown-item" href="/docs/latest/">latest</a>
           <% apilevels.forEach(function (version) { %>
-            <a class="dropdown-item" href="docs/<%= version %>/"><%= version %></a>
+            <a class="dropdown-item" href="/docs/<%= version %>/"><%= version %></a>
           <% }) %>
         </div>
       </li>
