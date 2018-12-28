@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>YODAOS: AI OS for Web community</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" type="text/css" href="style/background.css"> -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127419755-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-127419755-1');
-  </script>
+  <%- include('layout/header') %>
   <style type="text/css">
-    .jumbotron > h1, .jumbotron > .lead {
-      text-align: center
+    ul, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .outline {
+      min-height: 85vh;
+    }
+    .container > h3 {
+      letter-spacing: 3px;
+    }
+    .boards-list {
+      margin-top: 30px;
+    }
+    .boards-item {
+      margin-bottom: 30px;
+    }
+    .boards-item .row {
+      display: flex !important;
+    }
+    .boards-item > h4 {
+      color: #777;
+      font-family: monospace;
+      letter-spacing: 3px;
     }
   </style>
 </head>
 <body class="bg-light">
-  <%- include('layout/header') %>
-
+  <%- include('layout/navbar') %>
+  <div class="outline jumbotron shadow-sm" style="background:#fff">
+    <div class="container">
+      <h3 class="display-5 mt-5">Downloads</h3>
+      <ul class="boards-list">
+        <% releases.forEach(function(item) { %>
+        <li class="boards-item">
+          <h4><%= item[0] %></h4>
+          <div class="list-group list-group-flush">
+            <% item[1].forEach(function(image) { %>
+            <a class="row list-group-item list-group-item-action"
+              href="<%= image.imageUri.flush %>"
+              title="click to download">
+              <div class="col"><%= getReleaseName(image.imageUri.flush) %></div>
+              <div class="col-md-auto">v<%= image.version %></div>
+              <div class="col col-1"><%= image.datetime.replace('.md', '') %></div>
+            </a>
+            <% }) %>
+          </div>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
   <%- include('layout/footer') %>
 </body>
 </html>

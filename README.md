@@ -12,6 +12,12 @@ To build the complete website locally, please use:
 $ npm run build
 ```
 
+Or using Makefile:
+
+```sh
+$ make dist
+```
+
 The above command would generate 2 folders:
 
 * `.tmp` to store source repositories, currently only [yodaos-project/yodart][].

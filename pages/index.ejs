@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>YODAOS: AI OS for Web community</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" type="text/css" href="style/background.css"> -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127419755-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-127419755-1');
-  </script>
+  <%- include('layout/header') %>
   <style type="text/css">
     .jumbotron > h1, .jumbotron > .lead {
       text-align: center
@@ -20,7 +9,7 @@
   </style>
 </head>
 <body class="bg-light">
-  <%- include('layout/header') %>
+  <%- include('layout/navbar') %>
   <div class="jumbotron shadow-sm" style="background: #fff">
     <h1 class="display-5 mt-5">YODAOS</h1>
     <p class="text-center">
