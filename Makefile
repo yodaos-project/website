@@ -1,11 +1,15 @@
 dist/docs:
+	@mkdir -p dist
 	tools/build-apidocs.sh
 
 dist/index.html: dist/docs
-	@mkdir -p dist
-	tools/build-homepage.js > $@
+	tools/build-page.js index > $@
 
-dist: dist/docs dist/index.html
+dist/downloads: dist/docs
+	@mkdir -p dist/downloads
+	tools/build-page.js downloads > $@/index.html
+
+dist: dist/docs dist/index.html dist/downloads
 
 clean:
 	@rm -rf ./dist
