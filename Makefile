@@ -9,7 +9,11 @@ dist/downloads: dist/docs
 	@mkdir -p dist/downloads
 	tools/build-page.js downloads > $@/index.html
 
-dist: dist/docs dist/index.html dist/downloads
+dist/assets:
+	@mkdir -p dist/assets
+	cp assets/* ./dist/assets/
+
+dist: dist/docs dist/index.html dist/downloads dist/assets
 
 clean:
 	@rm -rf ./dist
