@@ -10,6 +10,7 @@ COPY template /opt/app/template
 COPY tutorials /opt/app/tutorials
 COPY pages /opt/app/pages
 COPY tools /opt/app/tools
+COPY assets /opt/app/assets
 
 WORKDIR /opt/app/
 RUN  ls /opt/app/
