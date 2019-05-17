@@ -4,7 +4,7 @@
   "description": "The website for YodaOS",
   "main": "index.js",
   "scripts": {
-    "start": "serve dist -l 8080",
+    "start": "serve dist -l 3000",
     "build": "make dist",
     "preview": "open ./dist/index.html"
   },
