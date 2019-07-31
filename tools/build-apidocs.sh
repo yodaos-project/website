@@ -6,9 +6,11 @@ DEST_DIR=dist/docs
 JSDOC=./node_modules/.bin/jsdoc
 
 init_source() {
-  rm -rf $ROOT_DIR
-  mkdir -p $ROOT_DIR
-  git clone https://github.com/yodaos-project/yodart.git $ROOT_DIR/yodart
+  if [ ! -d "$ROOT_DIR" ]; then
+    rm -rf $ROOT_DIR
+    mkdir -p $ROOT_DIR
+    git clone https://github.com/yodaos-project/yodart.git $ROOT_DIR/yodart
+  fi
 }
 
 init_target() {
